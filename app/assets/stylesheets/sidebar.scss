@@ -4,30 +4,39 @@
   @media only screen and (max-width: 640px) {
     display: none;
   }
-}
 
-#trending-tags {
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
+  .headline {
+    font-size: 11px;
+    color: #a1aeb0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
 
-  .trending-tag {
-    color: #404346;
-    font-size: 18px;
-    font-weight: 300;
+  #trending-tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
 
-    &:hover {
-      text-decoration: underline;
-    }
+    .trending-tag {
+      float: left;
+      color: #404346;
+      font-size: 18px;
+      font-weight: 300;
+      cursor: pointer;
 
-    &:after {
-      content: ",";
-      margin-right: 2px;
-    }
+      &:hover {
+        text-decoration: underline;
+      }
 
-    &:last-child {
       &:after {
-        content: '';
+        content: ",";
+        margin-right: 2px;
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
       }
     }
   }
