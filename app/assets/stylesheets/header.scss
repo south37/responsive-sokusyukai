@@ -12,28 +12,41 @@
     border-bottom: none;
   }
 
-  .site-logo {
+  .site-logo-wrapper {
     float: left;
     margin-top: 5px;
     height: 20px;
-    color: #404346;
-    cursor: pointer;
 
-    .site-logo-title {
-      font-size: 20px;
-      line-height: 20px;
-      font-weight: 700;
+    @media only screen and (max-width: 640px) {
+      position: absolute;
+      top: 15px;
+      left: calc(50% - 27px);
     }
 
-    .site-logo-company {
-      display: inline-block;
-      margin-top: 6px;
-      margin-left: 4px;
-      font-size: 12px;
-      line-height: 12px;
-      font-weight: 300;
-      font-style: italic;
-      vertical-align: top;
+    .site-logo {
+      color: #404346;
+      cursor: pointer;
+
+      .site-logo-title {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .site-logo-company {
+        display: inline-block;
+        margin-top: 6px;
+        margin-left: 4px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 300;
+        font-style: italic;
+        vertical-align: top;
+
+        @media only screen and (max-width: 640px) {
+          display: none;
+        }
+      }
     }
   }
 
