@@ -1,5 +1,4 @@
 #header {
-  $mobile-header-menu-height: 44px;
   position: relative;
   background: #FFF;
   height: 61px;
@@ -140,6 +139,7 @@
       .header-menue-close {
         float: left;
         padding: 14px;
+        cursor: pointer;
       }
 
       .header-menues-inner {
@@ -149,8 +149,8 @@
       .header-menu {
         float: none;
         margin: 0;
-        line-height: $mobile-header-menu-height;
-        height: $mobile-header-menu-height;
+        line-height: 44px;
+        height: 44px;
         border-bottom: 1px solid #fff;
 
         &.active {
