@@ -8,9 +8,14 @@
     = csrf_meta_tags
 
   %body
-    = render 'header'
-    #main
-      = yield
+    #container
+      #main-outer.clearfix
+        = render 'header'
+
+        #main
+          #main-inner.clearfix
+            #content
+              = yield
 
   %script{ :src => "https://use.fontawesome.com/d3a80f4dab.js" }
   = javascript_include_tag 'application'
