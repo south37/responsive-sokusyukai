@@ -25,7 +25,7 @@ body {
     flex: 1;  // TODO(south37) Remove
     width: calc(100% - 270px);  // TODO(south37) Remove
 
-    @media only screen and (max-width: 640px) {  // TODO(south37) Remove
+    @media only screen and (max-width: 780px) {  // TODO(south37) Remove
       width: 100%;
     }
   }
