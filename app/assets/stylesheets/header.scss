@@ -6,34 +6,14 @@
   border-bottom: 1px solid #f0f0f0;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.05);
 
-  @media only screen and (max-width: 640px) {
-    position: relative;
-    border-bottom: none;
-  }
-
   .header-menu-toggle-icon {
     display: none;
-
-    @media only screen and (max-width: 640px) {
-      float: left;
-      display: inline;
-      margin-top: -6px;
-      margin-left: -10px;
-      padding: 10px;
-      cursor: pointer;
-    }
   }
 
   .site-logo-wrapper {
     float: left;
     margin-top: 5px;
     height: 20px;
-
-    @media only screen and (max-width: 640px) {
-      position: absolute;
-      top: 15px;
-      left: calc(50% - 27px);
-    }
 
     .site-logo {
       color: #404346;
@@ -54,10 +34,6 @@
         font-weight: 300;
         font-style: italic;
         vertical-align: top;
-
-        @media only screen and (max-width: 640px) {
-          display: none;
-        }
       }
     }
   }
@@ -120,8 +96,74 @@
         }
       }
     }
+  }
 
-    @media only screen and (max-width: 640px) {
+  #header-avatar {
+    float: right;
+
+    #header-avatar-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+
+  #notification {
+    float: right;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      #notification-button {
+        color: darken(#D1D2D3, 10%);
+      }
+    }
+
+    #notification-icon {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      color: #D1D2D3;
+      font-size: 19px;
+      line-height: 30px;
+      text-align: center;
+      transition: color 0.2s;
+    }
+
+    #notification-counter {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      height: 14px;
+      width: 14px;
+      border-radius: 7px;
+      background: #FF3333;
+      font-size: 9px;
+      color: #FFFFFF;
+      line-height: 14px;
+      text-align: center;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  #header {
+    position: relative;
+    border-bottom: none;
+
+    .header-menu-toggle-icon {
+      float: left;
+      display: inline;
+      margin-top: -6px;
+      margin-left: -10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .header-menues {
       display: none;
       position: fixed;
       background: rgba(#6a6e71, 0.9);
@@ -169,58 +211,18 @@
         border-right: none;
       }
     }
-  }
 
-  #header-avatar {
-    float: right;
-
-    #header-avatar-image {
-      width: 30px;
-      height: 30px;
-      border-radius: 15px;
-      cursor: pointer;
-    }
-  }
-
-  #notification {
-    float: right;
-    position: relative;
-    margin-right: 20px;
-    cursor: pointer;
-
-    @media only screen and (max-width: 640px) {
-      position: static;
-    }
-
-    &:hover {
-      #notification-button {
-        color: darken(#D1D2D3, 10%);
-      }
-    }
-
-    #notification-icon {
-      position: relative;
-      width: 30px;
-      height: 30px;
-      color: #D1D2D3;
-      font-size: 19px;
-      line-height: 30px;
-      text-align: center;
-      transition: color 0.2s;
-    }
-
-    #notification-counter {
+    .site-logo-wrapper {
       position: absolute;
-      bottom: -3px;
-      right: -3px;
-      height: 14px;
-      width: 14px;
-      border-radius: 7px;
-      background: #FF3333;
-      font-size: 9px;
-      color: #FFFFFF;
-      line-height: 14px;
-      text-align: center;
+      top: 15px;
+      left: calc(50% - 27px);
+
+      .site-logo {
+        .site-logo-company {
+          display: none;
+        }
+      }
     }
   }
 }
+
