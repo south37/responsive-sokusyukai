@@ -1,0 +1,48 @@
+#projects-index {
+  padding: 30px 40px;
+
+  @media only screen and (max-width: 640px) {
+    padding: 20px 0;
+  }
+
+  > .column-main {
+    overflow: hidden;
+  }
+
+  .projects-index-sort-menu-form {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 16px;
+
+    @media only screen and (max-width: 640px) {
+      padding: 0 16px 16px;
+    }
+  }
+
+  .categories, .order-types {
+    float: left;
+
+    > .selected {
+      font-size: 18px;
+      line-height: 25px;
+      display: inline;
+    }
+
+    > i {
+      color: #afcbcf;
+      margin-left: 5px;
+    }
+  }
+
+  .order-types {
+    margin-left: 45px;
+  }
+
+  .projects-index-list {
+    margin:  30px -20px 0;
+
+    @media only screen and (max-width: 640px) {
+      margin: 0;
+    }
+  }
+}
+
