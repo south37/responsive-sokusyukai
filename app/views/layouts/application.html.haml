@@ -16,6 +16,8 @@
           #main-inner.clearfix
             #content
               = yield
+            #sidebar
+              = render 'sidebar'
 
   %script{ :src => "https://use.fontawesome.com/d3a80f4dab.js" }
   = javascript_include_tag 'application'
