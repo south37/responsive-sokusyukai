@@ -13,3 +13,48 @@
         %i.fa.fa-caret-down
 
     .projects-index-list.cf
+      - @projects.each do |project|
+
+        %article.portfolio-project
+          .project-cover-wrapper
+            .cover-image-wrapper
+              .cover-image{ style: "background-image: url(\"#{project[:image]}\");" }
+
+              .hover-layer
+                .hover-wrapper.like
+                  .indicator
+                    Liked
+                  .like-button-small.like
+                    %i.fa.fa-heart-o
+                    %i.fa.fa-heart
+
+          .project-detail
+            %h1.title
+              = project[:title]
+
+            .project-tags
+              - project[:tags].each do |tag|
+                .tag= tag
+
+            .project-contributor
+              .avatar-and-name
+                .thumbnail
+                  = image_tag project[:avatar]
+
+                %p.name
+                  = project[:contributor]
+
+          .line
+
+          .project-bottom.cf
+            %h3.like-count
+              %span.number
+                = project[:likes_count]
+              %span.unit
+                = 'Likes'
+
+            %h3.pv-count
+              %span.number
+                = project[:pv_count]
+              %span.unit
+                = 'Views'
