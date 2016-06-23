@@ -1,0 +1,33 @@
+%header#header.cf
+  .site-logo
+    %span.site-logo-title
+      CASE
+    %span.site-logo-company
+      by Wantedly
+
+  .header-menu
+    %ul
+      %li.menu
+        Feed
+      %li.menu.active
+        Projects
+
+  #notification
+    #notification-button
+      %i.fa.fa-bell
+      %span#notification-counter.badge-count.zero
+
+  .forms-wrapper
+    .search-wrapper
+      %i.fa.fa-search
+      = text_field_tag 'q', nil, placeholder: "Search projects, teams, and people", class: "search-bar-input", autocomplete: :off
+      #header-search-result-container
+        #header-search-result-container-tip
+        - %w(tags projects teams users).each do |genre|
+          .search-container{id: "search-#{genre}-container"}
+            .search-result-title
+            .search-results
+
+    #add-project-button.square-button
+      %i.fa.fa-upload
+      Add Project
