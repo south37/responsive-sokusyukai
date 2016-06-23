@@ -7,8 +7,13 @@ $ bin/rails server
 ```
 
 # 課題は以下
+## 0. viewport を指定
+- master か step_0 から start
+- layouts/application.html.haml を開いて、 `%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0" }` を追記
+- この指定をしないと、画面サイズが横幅 980px として扱われてしまう。
+
 ## 1. width を固定しない
-- master か step_1 から start
+- step_1 から start
 - project の 281px
   - width: 25% に変更
 - cover-image の 240px, 135px
