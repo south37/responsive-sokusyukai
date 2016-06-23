@@ -12,6 +12,19 @@
     border-bottom: none;
   }
 
+  .header-menu-list {
+    display: none;
+
+    @media only screen and (max-width: 640px) {
+      float: left;
+      display: inline;
+      margin-top: -6px;
+      margin-left: -10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
   .site-logo-wrapper {
     float: left;
     margin-top: 5px;
