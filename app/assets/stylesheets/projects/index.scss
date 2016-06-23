@@ -1,10 +1,6 @@
 #projects-index {
   padding: 30px 40px;
 
-  @media only screen and (max-width: 640px) {
-    padding: 20px 0;
-  }
-
   > .column-main {
     overflow: hidden;
   }
@@ -12,10 +8,6 @@
   .projects-index-sort-menu-form {
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 16px;
-
-    @media only screen and (max-width: 640px) {
-      padding: 0 16px 16px;
-    }
   }
 
   .categories, .order-types {
@@ -40,31 +32,31 @@
 
   .projects-index-list {
     margin:  30px -20px 0;
+  }
+}
 
-    @media only screen and (max-width: 640px) {
+
+@media only screen and (max-width: 640px) {
+  #projects-index {
+    padding: 20px 0;
+
+    .projects-index-sort-menu-form {
+      padding: 0 16px 16px;
+    }
+
+    .projects-index-list {
       margin: 0;
     }
   }
 }
+
 
 article.project {
   float: left;
   width: 25%;
   padding: 0 20px 40px;
   border-left: 1px solid #f0f0f0;
-  @media only screen and (max-width: 1280px) {
-    width: calc(100% / 3);
-  }
-  @media only screen and (max-width: 1024px) {
-    width: 50%;
-  }
-  @media only screen and (max-width: 640px) {
-    float: none;
-    width: auto;
-    padding: 16px 16px;
-    border-top: 2px solid #f0f0f0;
-    border-bottom: 2px solid #f0f0f0;
-  }
+
   > .project-cover-wrapper {
     position: relative;
     display: block;
@@ -187,11 +179,9 @@ article.project {
               transition: ransform 0.2s 0.1s;
             }
           }
-
         }
-
-
       }
+
       &:hover {
         .cover-image {
           transform: scale(1.15);
@@ -241,10 +231,6 @@ article.project {
       overflow: hidden;
       text-overflow: ellipsis;
 
-      @media only screen and (max-width: 640px) {
-        white-space: normal;
-      }
-
       .title-inner {
         cursor: pointer;
 
@@ -262,11 +248,6 @@ article.project {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-
-      @media only screen and (max-width: 640px) {
-        white-space: normal;
-        height: auto;
-      }
 
       > .tag {
         float: left;
@@ -338,7 +319,6 @@ article.project {
     }
   }
 
-
   > .line {
     margin-top: 16px;
     height: 0;
@@ -359,6 +339,38 @@ article.project {
 
     > .pv-count {
       margin-left: 6px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1280px) {
+  article.project {
+    width: calc(100% / 3);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  article.project {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  article.project {
+    float: none;
+    width: auto;
+    padding: 16px 16px;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+
+    .title {
+      white-space: normal;
+    }
+
+    .project-tags {
+      white-space: normal;
+      height: auto;
     }
   }
 }
