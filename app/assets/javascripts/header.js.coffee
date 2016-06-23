@@ -14,6 +14,8 @@ class HeaderMenues
 
   CLOSE_ICON_SELECTOR = '.header-menue-close'
 
+  SHOW_CLASS = 'show'
+
   @selector = '.header-menues'
 
   constructor: (@$el) ->
@@ -23,10 +25,10 @@ class HeaderMenues
 
   addEventListener: ->
     @$window.on EVENT.OPEN_MENUES, =>
-      @$el.show()
+      @$el.addClass(SHOW_CLASS)
 
     @$closeIcon.on 'click', =>
-      @$el.hide()
+      @$el.removeClass(SHOW_CLASS)
 
 
 class HeaderMenuToggleIcon
