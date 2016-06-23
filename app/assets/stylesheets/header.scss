@@ -1,0 +1,147 @@
+#header {
+  $mobile-header-menu-height: 44px;
+  background: #FFF;
+  height: 61px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.05);
+
+  @media only screen and (max-width: 640px) {
+    margin-bottom: $mobile-header-menu-height;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .site-logo {
+    float: left;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .header-menues {
+    float: left;
+
+    > .header-menu {
+      float: left;
+      margin-left: 50px;
+      padding-bottom: 12px;
+      list-style: none;
+      font-size: 15px;
+      line-height: 30px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &.active {
+        border-bottom: 3px solid #00a4bb;
+      }
+
+      &:hover {
+         color: lighten(#404346, 50%);
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      position: absolute;
+      background: #6a6e71;
+      color: #fff;
+      height: $mobile-header-menu-height;
+      bottom: - $mobile-header-menu-height;
+      left: 0;
+      width: 100%;
+
+      .header-menu {
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: $mobile-header-menu-height;
+        height: $mobile-header-menu-height;
+      }
+    }
+  }
+
+  #header-avatar {
+    float: right;
+
+    #header-avatar-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+
+  #notification {
+    float: right;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 640px) {
+      position: static;
+    }
+
+    &:hover {
+      #notification-button {
+        color: darken(#D1D2D3, 10%);
+      }
+    }
+
+    #notification-icon {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      color: #D1D2D3;
+      font-size: 19px;
+      line-height: 30px;
+      text-align: center;
+      transition: color 0.2s;
+    }
+
+    #notification-counter {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      height: 14px;
+      width: 14px;
+      border-radius: 7px;
+      background: #FF3333;
+      font-size: 9px;
+      color: #FFFFFF;
+      line-height: 14px;
+      text-align: center;
+    }
+  }
+
+  #search-box {
+    float: right;
+    margin-top: 3px;
+    margin-right: 20px;
+    padding-right: 30px;
+    border-right: 1px solid #f0f0f0;
+
+    @media only screen and (max-width: 640px) {
+      display: none;
+    }
+
+    #search-box-icon {
+      color: #bbb;
+    }
+
+    #search-bar-input {
+      margin-left: 10px;
+      width: 64px;
+      height: 22px;
+      min-height: unset;
+      font-size: 16px;
+      line-height: 22px;
+      color: black;
+      text-overflow: ellipsis;
+      outline: 0;
+      transition: 0.5s;
+
+      &:focus {
+        width: 268px;
+      }
+    }
+  }
+}

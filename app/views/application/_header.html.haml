@@ -5,29 +5,21 @@
     %span.site-logo-company
       by Wantedly
 
-  .header-menu
-    %ul
-      %li.menu
-        Feed
-      %li.menu.active
-        Projects
+  %ul.header-menues
+    %li.header-menu
+      Feed
+    %li.header-menu.active
+      Projects
+
+  #header-avatar
+    = image_tag 'https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=60,dh=60,da=s,ds=s,cw=60,ch=60,cc=FFFFFF)/assets/images/133790/original/a21ef78b-68fd-4dce-a0c3-c94916bf3019.jpeg?1456597854', id: 'header-avatar-image'
 
   #notification
-    #notification-button
+    #notification-icon
       %i.fa.fa-bell
-      %span#notification-counter.badge-count.zero
+      %span#notification-counter
+        3
 
-  .forms-wrapper
-    .search-wrapper
-      %i.fa.fa-search
-      = text_field_tag 'q', nil, placeholder: "Search projects, teams, and people", class: "search-bar-input", autocomplete: :off
-      #header-search-result-container
-        #header-search-result-container-tip
-        - %w(tags projects teams users).each do |genre|
-          .search-container{id: "search-#{genre}-container"}
-            .search-result-title
-            .search-results
-
-    #add-project-button.square-button
-      %i.fa.fa-upload
-      Add Project
+  #search-box
+    %i.fa.fa-search#search-box-icon
+    = text_field_tag 'q', nil, placeholder: "Search projects, teams, and people", id: "search-bar-input", autocomplete: :off
