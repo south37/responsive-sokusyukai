@@ -36,21 +36,6 @@
 }
 
 
-@media only screen and (max-width: 640px) {
-  #projects-index {
-    padding: 20px 0;
-
-    .projects-index-sort-menu-form {
-      padding: 0 16px 16px;
-    }
-
-    .projects-index-list {
-      margin: 0;
-    }
-  }
-}
-
-
 article.project {
   float: left;
   width: 25%;
@@ -360,17 +345,5 @@ article.project {
   article.project {
     float: none;
     width: auto;
-    padding: 16px 16px;
-    border-top: 2px solid #f0f0f0;
-    border-bottom: 2px solid #f0f0f0;
-
-    .title {
-      white-space: normal;
-    }
-
-    .project-tags {
-      white-space: normal;
-      height: auto;
-    }
   }
 }
