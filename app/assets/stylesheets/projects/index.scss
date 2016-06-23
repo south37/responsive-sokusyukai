@@ -47,3 +47,318 @@
   }
 }
 
+article.project {
+  float: left;
+  width: 25%;
+  padding: 0 20px 40px;
+  border-left: 1px solid #f0f0f0;
+  @media only screen and (max-width: 1280px) {
+    width: calc(100% / 3);
+  }
+  @media only screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 640px) {
+    float: none;
+    width: auto;
+    padding: 16px 16px;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  > .project-cover-wrapper {
+    position: relative;
+    display: block;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+
+    > .cover-image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+
+      .cover-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        transition: transform 0.8s;
+        backface-visibility: hidden;
+      }
+
+      .project-video-play-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .project-video-play {
+        width: 20%;
+        height: auto;
+      }
+
+      > .hover-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: background 0.2s;
+
+        > .hover-wrapper {
+          position: absolute;
+          right: 8px;
+
+          &.like {
+            bottom: 8px;
+          }
+
+          &.edit {
+            display: none;
+            bottom: 48px;
+
+            &.editable {
+              display: block;
+            }
+          }
+
+          > .indicator {
+            float: left;
+            width: 36px;
+            height: 18px;
+            margin-top: 7px;
+            margin-right: 6px;
+            background: rgba(0,0,0,0.60);
+            border-radius: 2px;
+            font-size: 11px;
+            color: #FFFFFF;
+            text-align: center;
+            vertical-align: middle;
+            transform: translateX(86px);
+            transition: transform 0.3s;
+          }
+
+          > .like-button-small {
+            float: left;
+            width: 32px;
+            height: 32px;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 16px;
+            transform: translateX(44px);
+            transition: transform 0.2s;
+            cursor: pointer;
+
+            &.like {
+              background: #d0021b;
+              .fa-heart {
+                display: inline-block;
+              }
+            }
+
+            .fa-heart {
+              margin-top: -2px;
+              display: none;
+              color: #fff;
+            }
+          }
+
+          &.edit {
+            > .indicator {
+              transition: ransform 0.3s 0.1s;
+            }
+
+            > .edit-button-small {
+              transition: ransform 0.2s 0.1s;
+            }
+          }
+
+        }
+
+
+      }
+      &:hover {
+        .cover-image {
+          transform: scale(1.15);
+        }
+        > .hover-layer {
+          background: rgba(0,0,0,0.30);
+          > .hover-wrapper {
+
+            > .indicator {
+              transform: translateX(0);
+            }
+
+            > .like-button-small, > .edit-button-small {
+              transform: translateX(0);
+
+              &:hover {
+                transform: translateX(0) scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-draft-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 18px;
+    padding: 0 6px;
+    font-size: 10px;
+    line-height: 16px;
+    border: solid 1px white;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  > .project-detail {
+    margin-top: 10px;
+
+    > .title {
+      font-size: 17px;
+      font-weight: 400;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media only screen and (max-width: 640px) {
+        white-space: normal;
+      }
+
+      .title-inner {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    > .project-tags {
+      height: 19px;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 19px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media only screen and (max-width: 640px) {
+        white-space: normal;
+        height: auto;
+      }
+
+      > .tag {
+        float: left;
+        color: #404346;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:after {
+          content: ",";
+          margin-right: 2px;
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  .project-contributor {
+    position: relative;
+    margin-top: 10px;
+    height: 20px;
+
+    .avatar-and-name {
+      position: relative;
+      display: block;
+      height: 20px;
+
+      > .thumbnail {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: 50% 50%;
+        cursor: pointer;
+
+        > img {
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      > .name {
+        display: inline-block;
+        max-width: 100%;
+        padding-left: 26px;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+  > .line {
+    margin-top: 16px;
+    height: 0;
+    width: 10px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  > .project-bottom {
+    margin-top: 10px;
+
+    > .pv-count, .like-count {
+      float: left;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 300;
+      color: #404346;
+    }
+
+    > .pv-count {
+      margin-left: 6px;
+    }
+  }
+}

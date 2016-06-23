@@ -15,7 +15,7 @@
     .projects-index-list.cf
       - @projects.each do |project|
 
-        %article.portfolio-project
+        %article.project
           .project-cover-wrapper
             .cover-image-wrapper
               .cover-image{ style: "background-image: url(\"#{project[:image]}\");" }
@@ -25,12 +25,12 @@
                   .indicator
                     Liked
                   .like-button-small.like
-                    %i.fa.fa-heart-o
                     %i.fa.fa-heart
 
           .project-detail
             %h1.title
-              = project[:title]
+              %span.title-inner
+                = project[:title]
 
             .project-tags
               - project[:tags].each do |tag|

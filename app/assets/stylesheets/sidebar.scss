@@ -1,0 +1,34 @@
+#sidebar {
+  padding: 30px 20px;
+
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+#trending-tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .trending-tag {
+    color: #404346;
+    font-size: 18px;
+    font-weight: 300;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:after {
+      content: ",";
+      margin-right: 2px;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
