@@ -18,7 +18,7 @@
         %article.project
           .project-cover-wrapper
             .cover-image-wrapper
-              .cover-image{ style: "background-image: url(\"#{project[:image]}\");" }
+              = image_tag project[:image], class: 'cover-image'
 
               .hover-layer
                 .hover-wrapper.like
