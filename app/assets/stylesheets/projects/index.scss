@@ -327,23 +327,3 @@ article.project {
     }
   }
 }
-
-
-@media only screen and (max-width: 1280px) {
-  article.project {
-    width: calc(100% / 3);
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  article.project {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  article.project {
-    float: none;
-    width: auto;
-  }
-}
