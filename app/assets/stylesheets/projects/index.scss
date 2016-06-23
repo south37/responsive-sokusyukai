@@ -20,6 +20,7 @@
 
   .categories, .order-types {
     float: left;
+    cursor: pointer;
 
     > .selected {
       font-size: 18px;
