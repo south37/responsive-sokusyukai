@@ -5,16 +5,17 @@
     %span.site-logo-company
       by Wantedly
 
-  %ul.header-menues
-    %li.header-menu
-      Feed
+  .header-menues
+    %ul.header-menues-inner
+      %li.header-menu
+        Feed
 
-    %li.header-menu.active
-      Projects
+      %li.header-menu.active
+        Projects
 
-    %li#search-box
-      %i.fa.fa-search#search-box-icon
-      = text_field_tag 'q', nil, placeholder: "Search projects, teams, and people", id: "search-bar-input", autocomplete: :off
+      %li#search-box
+        %i.fa.fa-search#search-box-icon
+        = text_field_tag 'q', nil, placeholder: "Search projects, teams, and people", id: "search-bar-input", autocomplete: :off
 
   #header-avatar
     = image_tag 'https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=60,dh=60,da=s,ds=s,cw=60,ch=60,cc=FFFFFF)/assets/images/133790/original/a21ef78b-68fd-4dce-a0c3-c94916bf3019.jpeg?1456597854', id: 'header-avatar-image'
