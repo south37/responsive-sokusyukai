@@ -1,10 +1,6 @@
 #sidebar {
   padding: 30px 20px;
 
-  @media only screen and (max-width: 780px) {
-    display: none;
-  }
-
   .headline {
     font-size: 11px;
     color: #a1aeb0;
