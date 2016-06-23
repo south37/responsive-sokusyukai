@@ -14,10 +14,10 @@ $ bin/rails server
 
 ## 1. width を固定しない
 - step_1 から start
-- project の 281px
+- project の width: 281px
   - width: 25% に変更
-- cover-image の 240px, 135px
-  - width: 100% に変更
+- cover-image の width: 240px
+  - max-width: 100% に変更
 
 ##  2. 幅が狭くなってきたら sidebar を消す
 - step_2 から start
